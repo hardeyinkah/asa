@@ -7,7 +7,10 @@ export default function EventCard({ event }) {
     event.accountsVary
 
   return (
-    <article className="flex h-full flex-col rounded-md border border-line bg-warm px-5 py-5">
+    <article
+      id={event.id}
+      className="flex h-full scroll-mt-24 flex-col rounded-md border border-line bg-warm px-5 py-5"
+    >
       <h2 lang="yo" className="text-2xl leading-snug">
         {event.name}
       </h2>

@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
+import { searchArchive } from "../../lib/searchArchive"
 
 const SUGGESTIONS = ["What is Ìwà?", "Festivals this month", "Ṣàngó in Brazil"]
 
@@ -16,21 +18,67 @@ function SendIcon() {
   )
 }
 
+function Answer({ question, result }) {
+  return (
+    <div role="status" className="mt-6 border-t border-line pt-5 text-left">
+      <p className="text-center font-serif text-lg leading-snug text-ink">“{question}”</p>
+      {result ? (
+        <div className="mt-4 rounded-md border border-line bg-warm px-5 py-5">
+          <p className="font-serif text-2xl text-ink" lang="yo">
+            {result.name}
+          </p>
+          {result.excerpt.type === "family" ? (
+            <ul className="mt-3 space-y-2">
+              {result.excerpt.family.map((person) => (
+                <li key={`${person.name}-${person.relation}`} className="text-sm leading-relaxed text-body">
+                  <span lang="yo" className="font-serif text-base text-ink">
+                    {person.name}
+                  </span>
+                  <span className="text-muted"> — </span>
+                  {person.relation}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-3 text-sm leading-relaxed text-body">{result.excerpt.text}</p>
+          )}
+          <Link
+            to={result.href}
+            className="mt-4 inline-block text-sm text-terracotta underline decoration-terracotta/30 underline-offset-[3px] hover:decoration-terracotta"
+          >
+            View full entry
+          </Link>
+        </div>
+      ) : (
+        <p className="mx-auto mt-3 max-w-sm text-center text-sm leading-relaxed text-body">
+          I don&apos;t have an answer for that yet — try browsing the{" "}
+          <Link
+            to="/explore"
+            className="text-terracotta underline decoration-terracotta/30 underline-offset-[3px] hover:decoration-terracotta"
+          >
+            Explore page
+          </Link>
+          .
+        </p>
+      )}
+    </div>
+  )
+}
+
 export default function AskBox() {
   const [query, setQuery] = useState("")
-  const [noted, setNoted] = useState("")
+  const [answer, setAnswer] = useState(null)
 
-  function note(value) {
+  function ask(value) {
     const trimmed = value.trim()
     if (!trimmed) return
-    console.log("Àṣà question:", trimmed)
-    setNoted(trimmed)
+    setAnswer({ question: trimmed, result: searchArchive(trimmed) })
     setQuery("")
   }
 
   function handleSubmit(event) {
     event.preventDefault()
-    note(query)
+    ask(query)
   }
 
   return (
@@ -65,7 +113,7 @@ export default function AskBox() {
           <li key={suggestion}>
             <button
               type="button"
-              onClick={() => note(suggestion)}
+              onClick={() => ask(suggestion)}
               className="rounded-full border border-line bg-warm px-3.5 py-1.5 text-sm text-body transition-colors hover:border-[#C9B49A] hover:text-ink"
             >
               {suggestion}
@@ -74,15 +122,15 @@ export default function AskBox() {
         ))}
       </ul>
 
-      {noted ? (
-        <div role="status" className="mt-6 border-t border-line pt-5 text-center">
-          <p className="font-serif text-lg leading-snug text-ink">“{noted}”</p>
-          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-body">
-            An answer will sit here once Àṣà is connected. For now the question
-            stays on this page.
-          </p>
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+          answer ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="min-h-0 overflow-hidden">
+          {answer ? <Answer question={answer.question} result={answer.result} /> : null}
         </div>
-      ) : null}
+      </div>
     </div>
   )
 }
