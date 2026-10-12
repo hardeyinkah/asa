@@ -12,6 +12,9 @@ const ACCENT_BY_ID = {
   obatala: "gold",
   orunmila: "olive",
   yemoja: "terracotta",
+  ogun: "olive",
+  osun: "gold",
+  esu: "terracotta",
   "owo-omode-ko-to-pepe": "olive",
 }
 

@@ -7,10 +7,12 @@ const FILTERS = [
   { id: "all", label: "All", to: "/explore" },
   { id: "Orisha", label: "Òrìṣà", lang: "yo", to: "/explore?category=Orisha" },
   { id: "Proverb", label: "Proverbs", to: "/proverbs" },
+  { id: "Story", label: "Stories", to: "/stories" },
 ]
 
 function filterIsActive(filterId, category, pathname) {
   if (filterId === "Proverb") return category === "Proverb" || pathname === "/proverbs"
+  if (filterId === "Story") return category === "Story" || pathname === "/stories"
   if (filterId === "all") return category === "all" && pathname === "/explore"
   return category === filterId
 }

@@ -46,6 +46,75 @@ export const events = [
     sources: ["Wikipedia — Agemo festival"],
     accountsVary:
       "Geographic framing matters here — this is Ìjẹ̀bú/Ogun State in origin, not Lagos proper, even though it's often discussed alongside Lagos traditions."
+  },
+
+  {
+    id: "osun-osogbo",
+    name: "Ọ̀ṣun Òṣogbo Festival",
+    location: "Òṣogbo, Ọ̀ṣun State, Nigeria — the shrine grove of the Ọ̀ṣun River",
+    status: "Awaiting confirmed date",
+    period: "Held once a year, widely placed in August; the week is announced by the town",
+    quickSummary:
+      "The yearly procession to the Ọ̀ṣun River at Òṣogbo, when the town carries offerings to Ọ̀ṣun and a votary maid bears the calabash.",
+    overview:
+      "Ọ̀ṣun Òṣogbo is the festival of the river òrìṣà at her shrine town. The sacred grove is known beyond Nigeria and is listed by UNESCO. The public days draw worshippers and visitors. It is a living rite of Òṣogbo, not a staged copy of one.",
+    significance:
+      "The festival renews the town's bond with Ọ̀ṣun and with the river. The procession and the offerings are the part outsiders most often see. What is done inside the shrine is not fully public, and this record does not pretend to describe it.",
+    details: [
+      "A votary maid, the Arugba, carries a calabash in the procession. Published accounts agree on that role and differ on details of her preparation",
+      "The grove and the river are the destination, not a hall in another city",
+      "Crowds have grown as the festival has become widely known. Going as a spectator is not the same as being a devotee",
+      "The exact week is set locally. August is the usual month named in print, not a promise of a calendar date"
+    ],
+    sources: ["Wikipedia — Osun-Osogbo", "UNESCO listing for the Osun-Osogbo Sacred Grove"],
+    accountsVary:
+      "Which day the procession walks, and what a visitor is allowed to see, change with the year and with the shrine. Do not treat a travel blog's timetable as the rite."
+  },
+
+  {
+    id: "ogun-festival",
+    name: "Ògún Festival",
+    location: "Many Yoruba towns — Ìrè-Èkìtì and Ondo are often named; neither is the only site",
+    status: "Awaiting confirmed date",
+    period: "Annual in the towns that keep it; the month is not the same town to town",
+    quickSummary:
+      "Festivals for Ògún, the òrìṣà of iron, kept in more than one town. There is no single national date.",
+    overview:
+      "Ògún is honoured with festivals where smiths, hunters, and the town that claims him gather. Ìrè-Èkìtì is widely called a center. Ondo has its own well-known observance. Other towns keep days of their own. Folding all of these into one calendar entry would be false.",
+    significance:
+      "The festivals mark iron, the hunt, and the dangerous usefulness of the blade. Dog, palm frond, and iron tools appear in descriptions. Which of those a given town puts first is local.",
+    details: [
+      "Do not arrive expecting one shared timetable. Ask in the town whose festival you mean",
+      "Iron objects and the hunt are the themes published accounts repeat",
+      "Some towns feature a procession of hunters or smiths. The order of rites is not copied here, because it is not one order",
+      "Colors and taboos named in print contradict one another often enough to leave them off this card"
+    ],
+    sources: ["Wikipedia — Ogun", "Town accounts of Ògún festivals at Ìrè-Èkìtì and Ondo"],
+    accountsVary:
+      "Which town's festival a book calls 'the' Ògún festival is a choice, not a fact. Months published for one town do not govern another."
+  },
+
+  {
+    id: "egungun-festival",
+    name: "Egúngún Festival",
+    location: "Yoruba towns and lineage compounds that keep egúngún — not one city",
+    status: "Awaiting confirmed date",
+    period: "Set by the lineage or the town. Some communities cluster their outings in the drier months; that is not a rule",
+    quickSummary:
+      "Masquerades of the ancestors. The cloth-covered figure is treated as a visitor from the dead, not as a costume for entertainment.",
+    overview:
+      "Egúngún is the masked appearance of the ancestors. Families and cults that keep it bring the masquerade out on days they set. The cloth, the voice, and the rules about who may touch the figure are part of the rite. Watching without an invitation, or treating it as a parade, misses what the practice is.",
+    significance:
+      "The outing is a visit from the dead to the living compound: blessing, correction, and the reminder that the lineage is not only the people standing there. It is not a show staged for tourists, even where visitors are allowed to watch from a distance.",
+    details: [
+      "The masquerade is covered in cloth. Printed descriptions agree on that and differ on the layers and the charms",
+      "Who may wear it, and who must stay back, is decided by the compound. Those rules are not optional local color",
+      "Dates are lineage dates. A festival in one quarter of a city does not tell you the date in the next",
+      "Photographs are often refused. Assume they are refused unless someone with the right to say so has agreed"
+    ],
+    sources: ["Wikipedia — Egungun", "Published studies of Yoruba egúngún (dates and costume details vary by town)"],
+    accountsVary:
+      "Costume, the words shouted, and the season differ by lineage. This card is the shared outline only."
   }
 ];
 

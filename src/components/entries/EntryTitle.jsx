@@ -52,6 +52,9 @@ export default function EntryTitle({ entry, category }) {
         >
           {entry.name}
         </h1>
+        {/* Audio player hook: when a recording exists, play it from here.
+            Nothing is recorded yet. A later entry.audio source would sit
+            beside this phonetic line. */}
         <p
           className={`mt-3 text-sm text-muted ${longPronunciation ? "leading-relaxed" : "tracking-[0.12em]"}`}
         >

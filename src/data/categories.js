@@ -17,6 +17,13 @@ export const categories = [
     href: "/proverbs",
   },
   {
+    id: "Story",
+    label: "Stories",
+    description: "Ìtàn: short tellings, with the lesson each one is remembered for.",
+    available: true,
+    href: "/stories",
+  },
+  {
     id: "festivals",
     label: "Festivals",
     description: "Dates, towns, and notes on visiting with respect.",

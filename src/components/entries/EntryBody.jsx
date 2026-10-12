@@ -83,7 +83,7 @@ export default function EntryBody({ entry }) {
         </EntrySection>
       ) : null}
 
-      {entry.sources?.length || entry.accountsVary ? (
+      {entry.sources?.length || entry.accountsVary || entry.verified === false ? (
         <EntrySection id="sources" title="Sources and notes">
           {entry.sources?.length ? (
             <ul className="list-disc space-y-2 pl-5">
@@ -98,6 +98,17 @@ export default function EntryBody({ entry }) {
                 Accounts vary
               </span>
               {entry.accountsVary}
+            </p>
+          ) : null}
+          {entry.verified === false ? (
+            <p className="border-l-2 border-line pl-4">
+              <span className="mb-1 inline-flex rounded-full border border-line px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-muted">
+                Unverified
+              </span>
+              <span className="mt-2 block">
+                {entry.unverifiedNote ||
+                  "This wording or telling still needs a fluent speaker to confirm."}
+              </span>
             </p>
           ) : null}
         </EntrySection>

@@ -4,10 +4,14 @@ import { categories } from "../../data/categories"
 export default function CategoryStrip() {
   return (
     <section className="border-t border-line bg-warm" aria-label="Browse by category">
-      <ul className="mx-auto grid max-w-6xl md:grid-cols-3">
+      <ul className="mx-auto grid max-w-6xl sm:grid-cols-2">
         {categories.map((category, index) => {
-          const borders =
-            index > 0 ? "border-t border-line md:border-t-0 md:border-l" : ""
+          const borders = [
+            "border-line",
+            index > 0 ? "border-t" : "",
+            index % 2 === 1 ? "sm:border-l" : "",
+            index < 2 ? "sm:border-t-0" : "",
+          ].join(" ")
 
           const body = (
             <>

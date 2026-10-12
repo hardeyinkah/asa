@@ -5,6 +5,7 @@ import Logo from "./Logo"
 const NAV = [
   { to: "/explore", label: "Explore" },
   { to: "/proverbs", label: "Proverbs" },
+  { to: "/stories", label: "Stories" },
   { to: "/events", label: "Events" },
   { to: "/learn", label: "Learn Yoruba" },
   { to: "/about", label: "About" },
@@ -60,7 +61,7 @@ export default function SiteHeader() {
       <div className="mx-auto hidden h-16 max-w-6xl grid-cols-[1fr_auto_1fr] items-center px-6 md:grid">
         <Logo />
         <nav aria-label="Primary">
-          <NavLinks className="flex items-center gap-8" />
+          <NavLinks className="flex items-center gap-5 lg:gap-7" />
         </nav>
         <div className="justify-self-end">
           <AskButton />
