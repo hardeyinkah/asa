@@ -1,16 +1,39 @@
-# React + Vite
+# Àṣà
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A website for exploring Yoruba culture: Òrìṣà, proverbs, stories and the Yoruba language. Built for people in the diaspora and anyone curious about the culture.
 
-Currently, two official plugins are available:
+**Live site:** https://asa-blush.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Òrìṣà profiles** with meaning, pronunciation and name variants across the diaspora (for example Ṣàngó, Shango, Xangô, Changó)
+- **Proverbs** with translations and explanations
+- **Stories:** Ìjàpá (tortoise) tales retold in English
+- **Learn Yoruba:** the alphabet, tones, how words are built, and numbers 1 to 100
+- **Chat-style search** that finds answers in the site's own content, with no external AI service
+- **Honest sourcing:** entries that haven't been checked yet are marked *Unverified*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built with
 
-## Expanding the Oxlint configuration
+- React + Vite
+- JavaScript, HTML, CSS
+- Deployed on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run it locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173
+
+## Roadmap
+
+- Festival and events calendar
+- Audio pronunciation
+- More languages (Yoruba, Spanish)
+
+## Author
+
+Saheed Muhammed: [sababuilds.vercel.app](https://sababuilds.vercel.app)
